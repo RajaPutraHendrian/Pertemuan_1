@@ -41,7 +41,7 @@ void KEDAI::set_harga() {
 // Proses Pembelian: Menampilkan menu dan menginput pilihan user
 void KEDAI::proses_pembelian() {
     int pil, jumlah;
-    do {
+    do{
         cout<<"+============ INI KEDAI ============+"<<endl;
         cout<<left<<setw(11)<<"|"<<"Selamat Datang!"<<right<<setw(11)<<"|"<<endl;
         cout<<"| 1. Ayam Goreng.........Rp. 17.000 |"<<endl;
@@ -51,22 +51,22 @@ void KEDAI::proses_pembelian() {
         cout<<"Pilih Menu: "; 
         cin>>pil;
 
-        if (pil >= 1 && pil <= 2) {
-            cout << "Jumlah: ";  
-            cin >> jumlah;
+        if(pil >= 1 && pil <= 2) {
+            cout<<"Jumlah: ";  
+            cin>>jumlah;
 
-            switch (pil) {
+            switch(pil) {
                 case 1: totalAG += hargaAG * jumlah; break;
                 case 2: totalAB += hargaAB * jumlah; break;
                 default: break;
             }
-            cout << "Menu Berhasil Ditambahkan!" << endl;
+            cout<<"Menu Berhasil Ditambahkan!"<<endl;
         } 
-        else if (pil == 0) {
-            cout << "Pembelian Anda Berhasil!" << endl;
+        else if(pil == 0) {
+            cout<<"Pembelian Anda Berhasil!"<<endl;
         } 
         else { 
-            cerr << "Input Tidak Valid!" << endl; 
+            cerr<<"Input Tidak Valid!"<<endl; 
         }
 
         system("pause");
